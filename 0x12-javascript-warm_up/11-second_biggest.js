@@ -1,13 +1,10 @@
 #!/usr/bin/node
 
-const { argv } = require('process');
-const args = argv.slice(2);
-let result = 0;
-let finalArray = [];
+const argv = process.argv;
 
-if (args.length > 1) {
-  finalArray = [...new Set(args.map((e) => parseInt(e)).sort((a, b) => b - a))];
-  result = finalArray.length > 1 ? finalArray[1] : finalArray[0];
+if (argv.length <= 3) {
+  console.log(0);
+} else {
+  const maxsecond = argv.sort(function (a, b) { return b - a; })[3];
+  console.log(maxsecond);
 }
-
-console.log(result);

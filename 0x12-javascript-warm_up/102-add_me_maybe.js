@@ -1,7 +1,5 @@
 #!/usr/bin/node
 
-const addMeMaybe = (number, theFunction) => {
+exports.addMeMaybe = (number, theFunction) => {
   theFunction(number + 1);
 };
-
-module.exports = { addMeMaybe };
